@@ -2,7 +2,7 @@ from datetime import datetime
 import random
 import re
 
-#Перше завдання
+# Перше завдання
 def get_days_from_today(date):
     try:
         string_to_date = datetime.strptime(date, "%Y-%m-%d").date()
@@ -11,7 +11,7 @@ def get_days_from_today(date):
     except ValueError:
         print(f"Введені дані {date} мають неправильний формат")
 
-#Друге завдання
+# Друге завдання
 def get_numbers_ticket(min, max, quantity):
     numbers = []
     try:
@@ -29,7 +29,7 @@ def get_numbers_ticket(min, max, quantity):
     except TypeError:
        print("Введено букви замість цифр")
 
-#Третє завдання
+# Третє завдання
 raw_numbers = [
     "067\\t123 4567",
     "(095) 234-5678\\n",
