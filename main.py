@@ -15,7 +15,7 @@ def get_days_from_today(date):
 def get_numbers_ticket(min, max, quantity):
     numbers = []
     try:
-        while quantity > 0:
+        while quantity > 0 and min <= quantity <= max:
             new_number = random.randint(min, max)
             if numbers.count(new_number) == 0:
                 numbers.append(new_number)
@@ -25,9 +25,9 @@ def get_numbers_ticket(min, max, quantity):
         numbers.sort()
         return numbers
     except ValueError:
-       print("Введено від\'ємні значення")
+       return numbers
     except TypeError:
-       print("Введено букви замість цифр")
+       return numbers
 
 # Третє завдання
 raw_numbers = [
